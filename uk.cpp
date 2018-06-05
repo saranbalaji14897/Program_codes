@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int i,j,k=1,l=1,n,g,t,temp=0;
+    cin>>n;
+    if(n%2==0){
+        for(i=1;i<=n;i++){
+            if(i<=n/2){
+                k=l;
+            for(j=1;j<n;j++){
+                cout<<k;
+                k++;
+            }
+            l=k+n;
+            }
+            if(i>n){
+                l=k;
+            for(j=1;j<=n;j++){
+                cout<<k;
+                k++;
+            }
+            k=l-2*n;
+            }
+            cout<<"\n";
+    }
+}
+    else{
+        g=(n/2)+1;
+        for(i=1;i<=n;i++){
+            if(i<=g){
+                k=l;
+                for(j=1;j<=n;j++){
+                    cout<<k;
+                    k++;
+                }
+                l=k+n;
+                t=k-2*n;
+            }
+            if(i>g){
+                if(temp==0){
+                    k=t;
+                    temp++;
+                }
+                l=k;
+                for(j=1;j<=n;j++){
+                    cout<<k;
+                    k++;
+                }
+                k=l-2*n;
+            }
+            cout<<"\n";
+        }
+    }
+}
